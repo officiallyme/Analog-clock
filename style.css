@@ -42,9 +42,8 @@ body {
   font-weight: bold;
   transform: rotate(calc(30deg * var(--i)));
 }
-.clock p {
+.clock b {
   transform: rotate(calc(-30deg * var(--i)));
-  opacity: 0.5;
 }
 .circle {
   position: absolute;
@@ -54,14 +53,15 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  z-index: var(--ind);
 }
 .circle2 {
   width: 200px;
   height: 200px;
 }
 .circle3 {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
 }
 .circle i {
   content: "";
@@ -107,7 +107,15 @@ body {
   font-weight: 500;
   color: var(--clr);
 }
+.hour::after {
+  position: absolute;
+  right: ;
+  margin-left: 36px;
+  content: ":";
+  color: red;
+}
 .ampm {
+  margin-right: 5px;
   font-size: 12px;
 }
 .animate {
